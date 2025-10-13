@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package signals;
+
+service SignalService {
+rpc StreamBuySignals(StreamRequest) returns (stream BuySignal);
+}
+
+message StreamRequest {
+string subscriber_id = 1;
+}
+
+message BuySignal {
+string token = 1;
+double score = 2;
+string reason = 3;
+int64 timestamp = 4;
+}
