@@ -9,6 +9,3 @@ prost = "0.13"
 
 [build-dependencies]
 tonic-build = "0.12"
-
-
-memecoin-proto = { git = "https://github.com/hakimkal/memecoin-proto.git", tag = "v1.0.0" }
