@@ -3,16 +3,31 @@ syntax = "proto3";
 package signals;
 
 service SignalService {
-rpc StreamBuySignals(StreamRequest) returns (stream BuySignal);
+  rpc StreamBuySignals(StreamRequest) returns (stream BuySignal);
 }
 
 message StreamRequest {
-string subscriber_id = 1;
+  string subscriber_id = 1;
+  string receiver_id = 2;
 }
 
-message BuySignal {
-string token = 1;
-double score = 2;
-string reason = 3;
-int64 timestamp = 4;
+
+
+message  BuySignal {
+  string signal = 1;
+  string name = 2;
+  string symbol = 3;
+  string composite_score = 4;
+  string token_address = 5;
+  string chain_id = 6;
+  string dex_id = 7;
+  string risk_level = 8;
+  string liquidity_direction = 9;
+  string trend_direction = 10;
+  string rsi = 11;
+  string sma_long = 12;
+  string sma_short = 13;
+  string created_at_wat = 14;
+  string updated_at_wat = 15 ;
+  string warnings = 16;
 }
