@@ -3,6 +3,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .build_server(true)
         .build_client(true)
         // .out_dir("src/generated")
+        .type_attribute("memecoin_proto.signals.BuySignal", "#[derive(serde::Serialize, serde::Deserialize)]")
         .file_descriptor_set_path("src/signals_descriptor.rs") // Output file for FILE_DESCRIPTOR_SET
         .compile_protos(&["proto/signals.proto"], &["proto"])?;
     Ok(())
