@@ -30,4 +30,37 @@ message  BuySignal {
   int64 created_at = 14;
   int64 updated_at = 15 ;
   string warnings = 16;
+  double entry_price = 17;
+  double target_price = 18;
+  double entry_market_cap = 19;
+  double current_market_cap = 20;
+  double entry_liquidity = 21;
+  double current_liquidity = 22;
+  double entry_volume = 23;
+  double current_volume = 24;
+  double current_price = 25;
+
+}
+
+message  PriceChangeSignal {
+  string signal = 1;
+  string name = 2;
+  string symbol = 3;
+  string composite_score = 4;
+  string token_address = 5;
+  string chain_id = 6;
+  string dex_id = 7;
+  string rsi = 8;
+  string sma_long = 9;
+  string sma_short = 10;
+  double entry_price = 11;
+  double target_price = 12;
+  double price_change_percent = 13;
+  double current_market_cap = 14;
+  double entry_liquidity = 15;
+  double current_liquidity = 16;
+  double entry_volume = 17;
+  double current_volume = 18;
+  double current_price = 19;
+
 }
