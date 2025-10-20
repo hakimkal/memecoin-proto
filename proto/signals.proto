@@ -39,6 +39,7 @@ message  BuySignal {
   double entry_volume = 23;
   double current_volume = 24;
   double current_price = 25;
+ optional TokenSecurityInfo token_security_info = 26;
 
 }
 
@@ -62,5 +63,19 @@ message  PriceChangeSignal {
   double entry_volume = 17;
   double current_volume = 18;
   double current_price = 19;
+
+}
+
+message  TokenSecurityInfo {
+
+  string summary = 1;
+  bool is_honeypot = 2;
+  bool is_in_dex = 3;
+  int64  lp_holder_count = 4;
+  double buy_tax = 5;
+  double sell_tax = 6;
+
+  double risk_score = 7;
+  string risk_level = 8;
 
 }
