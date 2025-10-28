@@ -46,6 +46,8 @@ message  BuySignal {
   optional string telegram_url = 29;
   optional string description = 30;
   optional int64 twitter_follower_count = 31;
+  optional string pump_grade = 32;
+  optional double pump_score = 33;
 
 }
 
