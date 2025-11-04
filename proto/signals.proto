@@ -48,6 +48,7 @@ message  BuySignal {
   optional int64 twitter_follower_count = 31;
   optional string pump_grade = 32;
   optional double pump_score = 33;
+  optional string x_sentiment = 34;
 
 }
 
