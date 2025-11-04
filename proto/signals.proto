@@ -39,8 +39,8 @@ message  BuySignal {
   double entry_volume = 23;
   double current_volume = 24;
   double current_price = 25;
-  optional  TokenSecurityInfo token_security_info = 26;
 
+  optional  TokenSecurityInfo token_security_info = 26;
   optional string website = 27;
   optional string twitter_url = 28;
   optional string telegram_url = 29;
@@ -85,7 +85,7 @@ message  TokenSecurityInfo {
   double sell_tax = 6;
   double risk_score = 7;
   string risk_level = 8;
- optional int64  holder_count = 9;
+  optional int64  holder_count = 9;
 
 
 }
